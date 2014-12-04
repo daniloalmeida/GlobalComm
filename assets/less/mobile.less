@@ -1,0 +1,584 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*************************************/
+/*** MOBILE!!!!!! ***/
+/*************************************/
+
+/*************************************/
+/*** GENERAL CONFIGS AND VARIABLES ***/
+/*************************************/
+
+@font-face {
+    font-family: 'BellGothicStdBlack';
+    src: url('../fonts/BellGothicStd-Black/bellgothicstd-black.eot');
+    src: url('../fonts/BellGothicStd-Black/bellgothicstd-black.eot') format('embedded-opentype'),
+         url('../fonts/BellGothicStd-Black/bellgothicstd-black.woff') format('woff'),
+         url('../fonts/BellGothicStd-Black/bellgothicstd-black.ttf') format('truetype'),
+         url('../fonts/BellGothicStd-Black/bellgothicstd-black.svg#BellGothicStdBlack') format('svg');
+}
+
+@font-face {
+    font-family: 'BellGothicStdBold';
+    src: url('../fonts/BellGothicStd-Bold/bellgothicstd-bold.eot');
+    src: url('../fonts/BellGothicStd-Bold/bellgothicstd-bold.eot') format('embedded-opentype'),
+         url('../fonts/BellGothicStd-Bold/bellgothicstd-bold.woff') format('woff'),
+         url('../fonts/BellGothicStd-Bold/bellgothicstd-bold.ttf') format('truetype'),
+         url('../fonts/BellGothicStd-Bold/bellgothicstd-bold.svg#BellGothicStdBold') format('svg');
+}
+
+@font-face {
+    font-family: 'BellGothicStdLight';
+    src: url('../fonts/BellGothicStd-Light/bellgothicstd-light.eot');
+    src: url('../fonts/BellGothicStd-Light/bellgothicstd-light.eot') format('embedded-opentype'),
+         url('../fonts/BellGothicStd-Light/bellgothicstd-light.woff') format('woff'),
+         url('../fonts/BellGothicStd-Light/bellgothicstd-light.ttf') format('truetype'),
+         url('../fonts/BellGothicStd-Light/bellgothicstd-light.svg#BellGothicStdLight') format('svg');
+}
+
+@font-face {
+    font-family: 'EurostileLTStdBold';
+    src: url('../fonts/EurostileLTStd-Bold/eurostileltstd-bold.eot');
+    src: url('../fonts/EurostileLTStd-Bold/eurostileltstd-bold.eot') format('embedded-opentype'),
+         url('../fonts/EurostileLTStd-Bold/eurostileltstd-bold.woff') format('woff'),
+         url('../fonts/EurostileLTStd-Bold/eurostileltstd-bold.ttf') format('truetype'),
+         url('../fonts/EurostileLTStd-Bold/eurostileltstd-bold.svg#EurostileLTStdBold') format('svg');
+}
+
+@font-face {
+    font-family: 'EurostileLTStdBoldCondensed';
+    src: url('../fonts/EurostileLTStd-BoldCn/eurostileltstd-boldcn.eot');
+    src: url('../fonts/EurostileLTStd-BoldCn/eurostileltstd-boldcn.eot') format('embedded-opentype'),
+         url('../fonts/EurostileLTStd-BoldCn/eurostileltstd-boldcn.woff') format('woff'),
+         url('../fonts/EurostileLTStd-BoldCn/eurostileltstd-boldcn.ttf') format('truetype'),
+         url('../fonts/EurostileLTStd-BoldCn/eurostileltstd-boldcn.svg#EurostileLTStdBoldCondensed') format('svg');
+}
+
+@font-face {
+    font-family: 'EurostileLTStdDemi';
+    src: url('../fonts/EurostileLTStd-Demi/eurostileltstd-demi.eot');
+    src: url('../fonts/EurostileLTStd-Demi/eurostileltstd-demi.eot') format('embedded-opentype'),
+         url('../fonts/EurostileLTStd-Demi/eurostileltstd-demi.woff') format('woff'),
+         url('../fonts/EurostileLTStd-Demi/eurostileltstd-demi.ttf') format('truetype'),
+         url('../fonts/EurostileLTStd-Demi/eurostileltstd-demi.svg#EurostileLTStdDemi') format('svg');
+}
+
+@font-face {
+    font-family: 'EurostileLTStdCondensed';
+    src: url('../fonts/EurostileLTStd-Cn/eurostileltstd-cn.eot');
+    src: url('../fonts/EurostileLTStd-Cn/eurostileltstd-cn.eot') format('embedded-opentype'),
+         url('../fonts/EurostileLTStd-Cn/eurostileltstd-cn.woff') format('woff'),
+         url('../fonts/EurostileLTStd-Cn/eurostileltstd-cn.ttf') format('truetype'),
+         url('../fonts/EurostileLTStd-Cn/eurostileltstd-cn.svg#EurostileLTStdCondensed') format('svg');
+}
+
+@bellblack: 'BellGothicStdBlack', sans-serif;
+@bellbold: 'BellGothicStdBold', sans-serif;
+@belllight: 'BellGothicStdLight', sans-serif;
+@eurobold: 'EurostileLTStdBold', sans-serif;
+@euroboldcond: 'EurostileLTStdBoldCondensed', sans-serif;
+@eurodemi: 'EurostileLTStdDemi', sans-serif;
+@eurocond: 'EurostileLTStdCondensed', sans-serif;
+
+@mainblue: #485275;
+@mainyellow: #ece77d;
+
+/*************************************/
+/*** HELPER CLASSES ******************/
+/*************************************/
+
+.full-block(){
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+.center-block(){
+	width: 960px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.center-block-mobile(){
+	width: 95%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.line-list(){
+	display: block;
+	float: left;
+	margin: 0 0.7em;
+}
+
+.clearfix{
+	width: 100%;
+	height: 1px;
+	display: block;
+	clear: both;
+}
+
+.display-mobile{ display: block; }
+.display-default{ display: none; }
+
+.bell-gothic-light{ font-family: @belllight; }
+
+/** responsive styles **/
+@media screen and (max-width: 60.5em){
+	
+	/** NAV **/
+	div#nav{
+		.full-block();
+		position: absolute;
+		padding: 1em 0;
+		
+		div#nav-wrapper{
+			.full-block();
+
+			h1#logo-container,
+			ul#nav-container{
+				display: block;
+				margin: 0 auto;
+				float: none;
+				clear: both;
+			}
+
+			h1#logo-container{
+				width: 110px;
+				height: 114px;
+			}
+
+			ul#nav-container{
+				width: 40%;
+				height: auto;
+				display: none;
+				background-color: rgba(51,51,51, 0.6) !important;
+				position: absolute;
+				left: -17em;
+				top: 0;
+				padding: 1em 1em;
+
+				li{
+					display: block;
+					clear: both;
+					margin: 0.3em 0;
+					
+					a{
+						font-size: 1em;
+						padding: 0.3em 0 0 0;
+					}
+				}
+			}
+		}
+	}
+	
+	/*************************************/
+	/*** SLIDES **************************/
+	/*************************************/
+
+	div#slides{
+		.full-block();
+		height: 730px !important;
+		position: relative;
+		z-index:990;
+
+		.slide{
+			.full-block();
+			padding: 12em 0 0 0;
+			height: 535px !important;
+		}
+
+		.slide-wrapper{
+			.full-block();
+
+			h1, h2, h3, h4, h5, h6,
+			p, strong, span, a{ text-align: center; color: #FFF; }
+
+			h2,h4{ width: 95%; margin: 0 auto; }
+
+			a{
+				width: 95%;
+				font-size: 1.5em;
+			}
+		}
+
+		div#slide-nav{
+			.full-block();
+			height: 57px;
+			display: block;
+			position: absolute;
+			bottom: 1.7em;
+			left: 0;
+			margin: 0 0 0 0;
+
+			ul{
+				width: 19em;
+				height: auto;
+				overflow: hidden;
+				margin: 0 auto;
+				padding: 0 0.5em;
+
+				li{
+					.line-list();
+					margin: 0 1.2em !important;
+					padding: 0 !important;
+				}
+				
+				li#arrow-right{ float: left !important; }
+			}
+		}
+
+		div#slide01{
+			h3.display-mobile{
+				display: block;
+				background-color: transparent;
+				background-image: none;
+				width: 95%;
+				height: auto;
+				text-indent: 0;
+				margin: 0.4em auto;
+				
+				font-family: @eurodemi;
+				font-size: 2.6em;
+				
+				span{ font-family: @eurodemi; color: #ece77d; }
+				.subtitle{ font-family: @eurocond; color: #FFF; font-size: 0.6em !important; }
+			}
+			
+			h3.display-default{ display: none; }
+		}
+		
+		div#slide02{
+			h3.display-default{
+				width: 95%;
+				height: auto;
+				margin: 0.4em auto;
+				font-size: 2.2em;
+			}
+		}
+		
+		div#slide03{
+			h3.display-default{
+				width: 95%;
+				height: auto;
+				margin: 0.4em auto;
+				font-size: 2.2em;
+			}
+		}
+		
+		div#slide04{
+			h3.display-default{
+				width: 95%;
+				height: auto;
+				margin: 0.4em auto;
+				font-size: 2.2em;
+			}
+		}
+		
+		div#slide02,
+		div#slide03,
+		div#slide04{
+			a{ font-size: 1.7em; }
+		}
+		
+	}
+	
+	/*************************************/
+	/*** CONTENT BLOCK *******************/
+	/*************************************/
+
+	div.home-block{
+		.full-block();
+
+		.block-wrapper{
+			.center-block-mobile();
+			padding: 0 !important;
+			overflow: hidden;
+
+			.block-unit{
+				width: 90%;
+				height: auto;
+				overflow: hidden;
+				padding: 2em 4%;
+				margin: 0 auto;
+				float: none;
+				background-color: rgba(255,255,255, 0.9);
+			}
+
+			.block-link{
+				width: 99%;
+				font-size: 1.4em;
+			}
+		}
+	}
+
+	/*** COURSES BLOCK *******************/
+
+	div#block-courses{
+		
+		h3{ 
+			font-size: 1.4em;
+			line-height: 1.4em;
+			strong{ 
+				font-family: @eurodemi;
+				font-size: 1.4em;
+			}
+		}
+
+		p{ 
+			font-size: 1.3em; 
+			margin: 0.6em 0 !important; 
+			display: block;
+		}
+		
+		table{ display: none; }
+		
+		.display-mobile{ display: block; }
+		
+		ul, li{
+			width: 95%;
+			height: auto;
+			font-size: 1.1em;
+			font-style: italic;
+			text-align: left;
+			padding-left: 5%;
+		}
+
+	}
+	
+	/*** RANDOM BLOCKs *******************/
+	.random-block-01{
+		background-color: rgba(205,106,41, 1) !important;
+		background-image: none !important;
+				
+		.block-unit{ background-color: transparent !important; margin: 0 auto !important; }
+		
+		h3{ 
+			font-size: 1em;
+			line-height: 2em;
+			strong{ 
+				font-family: @eurodemi;
+				font-size: 2.4em;
+			}
+		}
+
+		p{ 
+			font-size: 1.3em; 
+			margin: 0.6em 0 !important; 
+			display: block;
+		}
+		
+		.block-link{ font-size: 1.4em !important; }
+	}
+	
+	.random-block-02{
+		background-color: rgba(255,0,0, 1) !important;
+		background-image: none !important;
+				
+		.block-unit{ background-color: transparent !important; margin: 0 auto !important; }
+		
+		h3{ 
+			font-size: 1em;
+			line-height: 2em;
+			strong{ 
+				font-family: @eurodemi;
+				font-size: 2em;
+			}
+		}
+
+		p{ 
+			font-size: 1.3em; 
+			margin: 0.6em 0 !important; 
+			display: block;
+		}
+		
+		.block-link{ font-size: 1.4em !important; }
+	}
+	
+	/*** CONTACT BLOCK *******************/
+
+	div#contact-block{
+		.full-block();
+
+		#contact-wrap{
+			.center-block-mobile();
+			padding: 3em 0;
+
+			h3{
+				font-size: 1.2em;
+				line-height: 1.8em;
+				strong{
+					font-size: 1.8em;
+				}
+			}
+
+
+			p{ font-family: @belllight; font-size: 1.4em; padding-top: 1em; }
+
+			form{
+				.full-block();
+				margin: 1em auto;
+
+				input{
+					width: 95%;
+					-webkit-appearance:none;
+				}
+
+				.btn-submit{ -webkit-appearance:none; }
+
+				textarea{
+					width: 95%;
+					-webkit-appearance:none;
+				}
+			}
+		}
+	}
+	
+	/*** MAP BLOCK *******************/
+
+	div#map{
+		.full-block();
+
+		#map-wrapper{
+			width: 90%;
+			height: auto;
+			display: block;
+
+			position: absolute;
+			top: auto !important;
+			bottom: 5% !important;
+			left: 0;
+			margin: 0 0 0 5%;
+
+			h2, h3, h4{ 
+				width: 100%;
+				text-align: center;
+				padding: 0.3em 0;
+			}
+			
+			h2{ font-size: 1.8em; }
+			h3, h4{ background-color: rgba(255,255,255, 0.9); }
+			
+			h3{ display: none; }
+			h4{ font-size: 1.2em; }
+		}
+
+	}
+	
+	/*** FOOTER BLOCK *******************/
+
+	div#footer{
+		.full-block();
+
+		div#fb-holder{
+			width: 95%;
+			padding: 1.5em 0;
+			margin: 0 auto;
+		}
+		
+		p{ width: 95%; display: block; margin: 0 auto; text-align: center; }
+		
+		.display-default{ display: none !important; }
+		.display-mobile{ display: block !important; }
+	}
+	
+	/*************************************/
+	/*** INTERNAL PAGES ******************/
+	/*************************************/
+
+	/*** GENERAL *******************/
+
+	.header{
+		.full-block();
+
+		.header-wrapper{
+			.full-block();
+			height: auto;
+			padding-top: 12em;
+			
+			#title{ font-size: 1.5em; }
+			#section-title{ font-size: 3.5em; }
+
+			.line-title{
+				.full-block();
+				margin-top: 0.5em;
+				overflow: hidden;
+
+				.line-left, .line-right, #title{ display: block; float: none; }
+				.line-left, .line-right{ display: none; }
+				#title{ width: 90%; margin: 0 auto !important; text-align: center; }
+			}
+
+		}
+	}
+	
+	.content{
+		.full-block();
+
+		.content-wrapper{
+			.center-block-mobile();
+			padding: 1em 0 2em 0;
+
+			.content-block{
+				width: 100%;
+				padding: 1em 0 2em 0 !important;
+				
+				.content-title{ font-size: 2em; padding: 0.5em 0px; }
+				.content-text{ font-weight: 400; font-size: 1.25em; }
+				.link-action{ font-size: 1.5em; }
+
+			}
+		}
+	}
+	
+	#we-recommend{
+		.full-block();
+
+		.content-title{ font-size: 2em; }
+		#we-recommend-bg{ .full-block(); }
+		#we-recommend-wrapper{
+			.full-block();
+
+			.recommend-link{
+				display: block;
+				float: none;
+				clear: both;
+				margin: 0;
+				padding: 0;
+				border: none;
+				
+				img{
+					width: 100% !important;
+					height: auto;
+				}
+			}
+		}
+	}
+	
+	/*** SPECIAL & TRAVEL HEADERS *******************/
+	#header-special,
+	#header-travel{ 
+		#section-title{ font-size: 3em; }
+	}
+
+}
+
+@media screen and (min-width: 61em) and (max-width: 65em){
+	/*************************************/
+	/*** INTERNAL PAGES ******************/
+	/*************************************/
+
+	/*** GENERAL *******************/
+
+	.header{
+		.header-wrapper{
+			height: 81%;
+			padding-top: 19%;
+		}
+	}
+}

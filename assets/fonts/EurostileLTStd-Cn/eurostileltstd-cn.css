@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'EurostileLTStdCondensed';
+    src: url('eurostileltstd-cn.eot');
+    src: url('eurostileltstd-cn.eot') format('embedded-opentype'),
+         url('eurostileltstd-cn.woff') format('woff'),
+         url('eurostileltstd-cn.ttf') format('truetype'),
+         url('eurostileltstd-cn.svg#EurostileLTStdCondensed') format('svg');
+}
